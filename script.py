@@ -19,12 +19,8 @@ def coffee_bot():
   print("Temperature: ", drink_temp, "\n")
 
   # Order Confirmation Message Template
-  message = "\nAlright, that's a " + size + " " + drink_temp + " "+ drink_type
+  message = "\nAlright, that's a {} {} {}".format(size, drink_temp, drink_type)
 
-  # Milk Choice
-  if drink_type == 'Latte':
-    milk_option = order_latte()
-    message += " made with " + milk_option
   
   # Order Confirmation Message
   print(message)
@@ -33,7 +29,7 @@ def coffee_bot():
   name = input('\nCan I get your name please? \n>')
 
   # Order Status
-  return 'Thanks, ' +  name + "! Your drink will be ready shortly."
+  return 'Thanks, {}! Your drink will be ready shortly.".format(name)
 
 # Call coffee_bot()!
 
