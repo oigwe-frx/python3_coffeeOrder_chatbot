@@ -1,3 +1,5 @@
+from utils import print_message, get_size, order_latte
+
 # Main Function
 
 def coffee_bot():
