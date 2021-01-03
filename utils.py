@@ -44,7 +44,7 @@ def get_drink_type():
   elif drink_type_res == 'b':
     return 'Mocha'
   elif drink_type_res == 'c':
-    return 'Latte'
+    return order_latte()
   else: 
     print(print_message())
     return get_drink_type()
