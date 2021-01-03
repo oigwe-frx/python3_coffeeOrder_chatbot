@@ -1,4 +1,4 @@
-from utils import print_message, get_size, order_latte, hot_or_cold
+from utils import print_message, get_size, order_latte, hot_or_cold, get_drink_type
 
 # Main Function
 
