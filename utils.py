@@ -1,4 +1,3 @@
-
 # Helper Functions
 
 # Error Function
@@ -44,7 +43,8 @@ def get_drink_type():
   elif drink_type_res == 'b':
     return 'Mocha'
   elif drink_type_res == 'c':
-    return order_latte()
+    drink = "Latte with {}".format(order_latte())
+    return drink
   else: 
     print(print_message())
     return get_drink_type()
@@ -64,4 +64,3 @@ def order_latte():
   else: 
     print(print_message())
     return order_latte()
-
