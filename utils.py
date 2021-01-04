@@ -2,13 +2,28 @@
 
 # Error Function
 def print_message():
-  return "\n I'm sorry, I did not understand your selection. Please enter the corresponding letter for your response. \n>"
+  return "I'm sorry, I did not understand your selection. Please enter the corresponding letter for your response. \n>"
+
+# Selection Choices
+
+# Order A Drink
+def order_drink ():
+
+  order_drink_res = input('\nWould you like to order a new drink? \n[y] Yes \n[n] No \n>').lower()
+
+  if order_drink_res == 'y':
+    return 'Yes'
+  elif order_drink_res == 'n':
+    return "No"
+  else:
+    print(print_message())
+    return order_drink()
 
 
 # Drink Size Function
 def get_size():
 
-  coffee_size_res = input('What size drink can I get for you? \n[a] Small \n[b] Medium \n[c] Large \n> ').lower()
+  coffee_size_res = input('\nWhat size drink can I get for you? \n[a] Small \n[b] Medium \n[c] Large \n>').lower()
   
   if coffee_size_res == 'a':
     return 'Small'
@@ -41,7 +56,7 @@ def get_drink_type():
   if drink_type_res == 'a':
     return 'Brewed Coffee'
   elif drink_type_res == 'b':
-    return 'Mocha'
+    return order_mocha_promo()
   elif drink_type_res == 'c':
     drink = "Latte with {}".format(order_latte())
     return drink
@@ -53,7 +68,7 @@ def get_drink_type():
 # Milk Option Function
 def order_latte():
 
-  milk_option_res = input('And what kind of milk would you like added to your latte? \n[a] 2% Milk \n[b] Non-Fat Milk \n[c] Soy Milk \n>').lower()
+  milk_option_res = input('\nAnd what kind of milk would you like added to your latte? \n[a] 2% Milk \n[b] Non-Fat Milk \n[c] Soy Milk \n>').lower()
 
   if milk_option_res == 'a':
     return '2% Milk'
@@ -64,3 +79,18 @@ def order_latte():
   else: 
     print(print_message())
     return order_latte()
+
+# Promotional Offer - White Caffè Mocha
+def order_mocha_promo():
+  
+  while True:
+    promo_res = input('\nWould you like to try our limited addition White Caffè Mocha? \n[a] Sure! \n[b] Maybe next time!\n>').lower()
+
+    if promo_res == 'a':
+      return 'White Caffè Mocha'
+    elif promo_res == 'b':
+      return 'Mocha'
+    else: 
+      print(print_message())
+      return order_mocha()
+
